@@ -1,0 +1,52 @@
+@import "./variables.scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  overscroll-behavior: none;
+}
+body {
+  background: $main-bg;
+  color: white;
+}
+.main {
+  background: $main-bg;
+  color: white;
+}
+.menuContainer {
+  width: 250px;
+  padding: 5px 20px;
+  border-right: 2px solid $soft-bg;
+}
+.contentContainer {
+  padding: 5px 20px;
+  width: 100%;
+}
+.notification {
+  position: relative;
+  span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: red;
+    text-align: center;
+    color: white;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    font-size: 12px;
+  }
+}
+.user {
+  display: flex;
+  gap: 10px;
+}
