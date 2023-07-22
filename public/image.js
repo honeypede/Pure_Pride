@@ -29,6 +29,7 @@ import product8 from "./orders/product8.jpg";
 import noavatar from "./noavatar.png";
 import del from "./delete.svg";
 import view from "./view.svg";
+import close from "./close.svg";
 export {
   home,
   profile,
@@ -59,4 +60,5 @@ export {
   noavatar,
   del,
   view,
+  close,
 };

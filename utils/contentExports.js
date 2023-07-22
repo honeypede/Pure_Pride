@@ -17,6 +17,14 @@ import {
   productIcon,
   revenueIcon,
   conversionIcon,
+  product1,
+  product2,
+  product3,
+  product4,
+  product5,
+  product6,
+  product7,
+  product8,
 } from "@/public/image";
 
 export const menus = [
@@ -99,7 +107,7 @@ export const menus = [
     ],
   },
   {
-    id: 1,
+    id: 4,
     title: "Analytics",
     links: [
       {
@@ -117,7 +125,7 @@ export const menus = [
     ],
   },
   {
-    id: 1,
+    id: 5,
     title: "Maintanence",
     links: [
       {
@@ -338,4 +346,81 @@ export const rows = [
   { id: 7, lastName: "Clifford", firstName: "Ferrara", age: 44 },
   { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
   { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
+];
+
+export const products = [
+  {
+    category: "purepride",
+    name: "Medicine - 1",
+    price: "500",
+    image: product1,
+  },
+  {
+    category: "injection",
+    name: "Medicine - 2",
+    price: "550",
+    image: product1,
+  },
+  {
+    category: "pride it",
+    name: "Medicine - 3",
+    price: "503",
+    image: product2,
+  },
+  {
+    category: "purepride",
+    name: "Medicine - 4",
+    price: "506",
+    image: product3,
+  },
+  {
+    category: "purepride",
+    name: "Medicine - 5",
+    price: "503",
+    image: product4,
+  },
+  {
+    category: "purepride",
+    name: "Medicine - 6",
+    price: "504",
+    image: product5,
+  },
+  {
+    category: "purepride",
+    name: "Medicine - 7",
+    price: "506",
+    image: product6,
+  },
+  {
+    category: "purepride",
+    name: "Medicine - 8",
+    price: "503",
+    image: product7,
+  },
+  {
+    category: "purepride",
+    name: "Medicine - 9",
+    price: "503",
+    image: product8,
+  },
+  {
+    category: "purepride",
+    name: "Medicine - 10",
+    price: "503",
+    image: product1,
+  },
+];
+
+export const product_input = [
+  { inputName: "Category", category: "Category", type: "text" },
+  { inputName: "Batch No", batch_no: "Batch No", type: "text" },
+  { inputName: "Expiery Date", expieryDate: "Expiery Date", type: "date" },
+  { inputName: "MRP", mrp: "MRP", type: "number" },
+  {
+    inputName: "Selling Price",
+    selling_Price: "Selling Price",
+    type: "number",
+  },
+  { inputName: "Quantity", quantity: "Quantity", type: "number" },
+  { inputName: "Image", image: "Image", type: "image" },
 ];

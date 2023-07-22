@@ -24,7 +24,7 @@ export default function Chartbox(props) {
               <Tooltip
                 contentStyle={{ background: "transparent", border: "none" }}
                 labelStyle={{ display: "none" }}
-                position={{ y: 60 }}
+                position={{ y: 40 }}
               />
               
               <Line
