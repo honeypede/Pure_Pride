@@ -1,22 +1,13 @@
-"use client";
 
 import { close } from "@/public/image";
 import Image from "next/image";
-import { useEffect } from "react";
 
 function Add(props) {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     console.log(e);
   };
-  useEffect(() => {
-    if (props.open) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-  }, [props.open]);
-  console.log(props.open);
+  
   return (
     <div className="add fixed  w-full h-full top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70 flex items-center justify-center">
       <div className="modal p-12 rounded-lg bg-[#2a3447] relative max-h-50+">

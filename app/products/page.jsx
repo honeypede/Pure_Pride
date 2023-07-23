@@ -1,7 +1,7 @@
 "use client";
 // pages/products/page.js
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { product_input, products } from "@/utils/contentExports";
@@ -11,6 +11,13 @@ import Add from "../../components/Add/Add";
 
 const ProductPage = () => {
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [open]);
   return (
     <>
       <Header category="products" title="all Products" />
@@ -36,7 +43,12 @@ const ProductPage = () => {
           </div>
         </div>
         {open && (
-          <Add slug="product" feilds={product_input} setOpen={setOpen} open={open}/>
+          <Add
+            slug="product"
+            feilds={product_input}
+            setOpen={setOpen}
+            open={open}
+          />
         )}
       </section>
     </>

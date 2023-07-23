@@ -17,7 +17,7 @@ export default function Cards(props) {
             />
           </Link>
           <div className="mt-4">
-            <h3 className="text-xs tracking-widest title-font mb-1">
+            <h3 className="text-sm tracking-widest title-font mb-1">
               {value.category}
             </h3>
             <h2 className="title-font text-lg font-medium">{value.name}</h2>
