@@ -7,7 +7,7 @@ import Link from "next/link";
 import { product_input, products } from "@/utils/contentExports";
 import Header from "@/components/Header";
 import Cards from "@/components/Cards";
-import Add from "@/components/Add/add";
+import Add from "../../components/Add/Add";
 
 const ProductPage = () => {
   const [open, setOpen] = useState(false);
