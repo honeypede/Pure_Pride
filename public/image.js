@@ -30,6 +30,7 @@ import noavatar from "./noavatar.png";
 import del from "./delete.svg";
 import view from "./view.svg";
 import close from "./close.svg";
+import menu from "./menu.svg";
 export {
   home,
   profile,
@@ -61,4 +62,5 @@ export {
   del,
   view,
   close,
+  menu,
 };

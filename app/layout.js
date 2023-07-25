@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
           </div>
 
           <div className="flex">
-            <div className="mt-20 lg:pb-64 pb-16 px-7 hidden md:block fixed top-0 left-0 h-full overflow-y-auto lg:w-64 md:w-52">
+            <div className=" mt-20 lg:pb-64 pb-16 px-7 hidden md:block fixed top-0 left-0 h-full overflow-y-auto lg:w-64 md:w-52">
               <Menu />
             </div>
             <div className="contentContainer md:ml-52 lg:ml-64">{children}</div>
