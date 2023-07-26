@@ -17,10 +17,10 @@ export const POST = async (req, res) => {
   // console.log(req.json());
   try {
     const product = {
+      id: Number.parseInt(Date.now().toString()),
       title,
       description,
       date: new Date(),
-      id: Date.now().toString(),
     };
     addproducts(product);
     return NextResponse.json({ message: "OK", product }, { status: 201 });
@@ -29,6 +29,4 @@ export const POST = async (req, res) => {
   }
 };
 
-export const DELETE = async () =>{
-  
-}
+export const DELETE = async () => {};

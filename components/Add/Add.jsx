@@ -43,6 +43,7 @@ function Add(props) {
                   type="file"
                   name={value.inputName}
                   id={value.inputName}
+                  accept="image/*"
                 />
               ) : (
                 <input

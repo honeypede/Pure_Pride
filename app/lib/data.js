@@ -27,3 +27,7 @@ export const updateproducts = (id, title, description) => {
     throw new Error("No products found ");
   }
 };
+
+export const getProductsById = (id) => {
+  return products_fromDB.find((products) => products.id === id);
+};
