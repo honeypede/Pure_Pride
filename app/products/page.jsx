@@ -1,9 +1,7 @@
-"use client";
 // pages/products/page.js
+"use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import { product_input, products } from "@/utils/contentExports";
 import Header from "@/components/Header";
 import Cards from "@/components/Cards";
@@ -18,6 +16,7 @@ const ProductPage = () => {
       document.body.classList.remove("overflow-hidden");
     }
   }, [open]);
+
   return (
     <>
       <Header category="products" title="all Products" />
@@ -43,12 +42,7 @@ const ProductPage = () => {
           </div>
         </div>
         {open && (
-          <Add
-            slug="product"
-            feilds={product_input}
-            setOpen={setOpen}
-            open={open}
-          />
+          <Add slug="product" feilds={product_input} setOpen={setOpen} />
         )}
       </section>
     </>

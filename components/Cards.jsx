@@ -1,4 +1,3 @@
-import { products } from "@/utils/contentExports";
 import Image from "next/image";
 import Link from "next/link";
 

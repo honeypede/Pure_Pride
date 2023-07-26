@@ -1,4 +1,4 @@
-
+import React from "react";
 import { close } from "@/public/image";
 import Image from "next/image";
 
@@ -7,10 +7,10 @@ function Add(props) {
     e.preventDefault();
     console.log(e);
   };
-  
+
   return (
-    <div className="add fixed  w-full h-full top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70 flex items-center justify-center">
-      <div className="modal p-12 rounded-lg bg-[#2a3447] relative max-h-50+">
+    <div className="add fixed w-full h-full top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70 flex items-center justify-center">
+      <div className="modal p-6 md:p-12 rounded-lg bg-[#2a3447] relative w-[90%] md:w-[50%] max-h-[80vh] overflow-y-auto">
         <span className="close absolute top-3 right-3 cursor-pointer">
           <Image
             src={close}
@@ -22,23 +22,37 @@ function Add(props) {
             }}
           />
         </span>
-        <h1 className="text-white mb-10 text-2xl">Add new {props.slug}</h1>
+        <h1 className="text-white mb-6 md:mb-10 text-2xl">
+          Add new {props.slug}
+        </h1>
         <form
           onSubmit={handleOnSubmit}
-          className="flex max-w-lg flex-wrap space-x-2 justify-between"
+          className="flex flex-col space-y-4 md:space-y-6"
         >
-          {props.feilds.map((value, index, array) => (
-            <div className="item flex flex-col space-y-3 mb-5" key={index}>
-              <label htmlFor="" className="text-[14px]">
-                {value.inputName}
+          {props.feilds.map((value, index) => (
+            <div className="item" key={index}>
+              <label
+                htmlFor={value.inputName}
+                className="text-[14px] text-white mr-4"
+              >
+                {value.inputName} :
               </label>
-              <input
-                className="p-3 bg-transparent text-white outline-none border border-blue-600 border-solid rounded-md"
-                type={value.type}
-                name=""
-                id=""
-                placeholder={`Enter the ${value.inputName}`}
-              />
+              {value.type === "image" ? (
+                <input
+                  className="p-3 bg-transparent text-white outline-none border border-blue-600 border-solid rounded-md"
+                  type="file"
+                  name={value.inputName}
+                  id={value.inputName}
+                />
+              ) : (
+                <input
+                  className="p-3 bg-transparent text-white outline-none border border-blue-600 border-solid rounded-md"
+                  type={value.type}
+                  name={value.inputName}
+                  id={value.inputName}
+                  placeholder={`Enter the ${value.inputName}`}
+                />
+              )}
             </div>
           ))}
           <button
